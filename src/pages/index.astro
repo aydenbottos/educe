@@ -1,16 +1,65 @@
 ---
-
+import '../styles/theme.css';
+const CAL_LINK = "https://cal.com/educe/diagnostic"; // create this in step 4
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>EDUCE — Draw out real AI performance.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Private AI training, workflow redesign, and measurement for Support & Marketing teams."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+        <div class="logo">ED<i>UCE</i></div>
+        <a class="btn ghost" href="/diagnostic">Diagnostic</a>
+      </div>
+
+      <p class="hero-kicker badge">AI Enablement • Vendor-neutral</p>
+      <h1>Turn AI dabbling into measurable results in 30 days.</h1>
+      <p style="max-width:680px">
+        EDUCE is an outcomes-driven AI training & enablement studio for Support and Marketing teams.
+        We redesign real workflows, ship guardrails, and prove ROI with before/after metrics.
+      </p>
+      <div class="grid" style="margin:18px 0 28px">
+        <a class="btn teal" href={CAL_LINK}>Book free 30-min AI Workflow Diagnostic</a>
+        <a class="btn ghost" href="/policy-pack">Download policy + prompt pack</a>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h2>What you get</h2>
+          <ul>
+            <li>15–30% time saved on selected tasks within 60 days</li>
+            <li>Safe-use policy & guardrails, day one</li>
+            <li>Reusable prompt/agent library & review rubrics</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>How it works</h2>
+          <ol>
+            <li><b>Baseline</b> time-on-task + sample artifacts</li>
+            <li><b>Live labs</b> on your workflows</li>
+            <li><b>Reinforcement</b> + measurement → exec ROI brief</li>
+          </ol>
+        </div>
+      </div>
+
+      <h2>Programs</h2>
+      <div class="grid two">
+        <div class="card"><b>Foundations (½-day)</b><br/>Safety, evaluation, structured prompting.</div>
+        <div class="card"><b>Role Lab — Support / Marketing (½-day)</b><br/>6 live exercises using your artifacts.</div>
+        <div class="card"><b>Enablement Sprint (4–6 weeks)</b><br/>Baseline → redesign → assets → measurement.</div>
+        <div class="card"><b>Leadership & Governance (2 hrs)</b><br/>Risk taxonomy, policy, tool rubric.</div>
+      </div>
+
+      <div class="footer">
+        <p>Outcome guarantee: If verified time savings &lt;10% by Day 60 (with agreed adoption), we run a free optimization sprint or refund 20%.</p>
+        <p>© {new Date().getFullYear()} EDUCE • <a href="/privacy">Privacy</a> • <a href="/terms">Terms</a> • <a href="mailto:hello@educe.academy">hello@educe.academy</a></p>
+      </div>
+    </div>
+  </body>
 </html>
