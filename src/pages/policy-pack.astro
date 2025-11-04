@@ -1,26 +1,53 @@
 ---
 import '../styles/theme.css';
 ---
-<html lang="en"><head><meta charset="utf-8"/><title>Policy + Prompt Pack • EDUCE</title><meta name="viewport" content="width=device-width, initial-scale=1"/></head>
-<body><div class="container">
-<h1>Policy + Prompt Pack (Starter)</h1>
-<div class="card"><pre><code>- Human-in-the-loop for anything external
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Policy + Prompt Pack • EDUCE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Policy + Prompt Pack (Starter)</h1>
+
+      <div class="card">
+        <pre><code>- Human-in-the-loop for anything external
 - Red/Amber/Green data classification; only Green in consumer models
 - Prefer client enterprise tenancy; otherwise use local/offline tools
 - Cite sources; run chain-of-verification for facts
-- Keep audit trail (prompt, output, reviewer, decision)</code></pre></div>
+- Keep audit trail (prompt, output, reviewer, decision)</code></pre>
+      </div>
 
-<h2>Prompt Patterns (copy & adapt)</h2>
-<div class="grid two">
-  <div class="card"><b>Role-Task-Context-Constraints-Format</b><pre><code>You are a [role].
+      <h2>Prompt Patterns (copy &amp; adapt)</h2>
+
+      <div class="grid two">
+        <div class="card">
+          <b>Role-Task-Context-Constraints-Format</b>
+          <pre><code>You are a [role].
 Task: [what to do].
 Context: [facts, source].
 Constraints: [brand, policy].
-Output format: [bullet spec].</code></pre></div>
-  <div class="card"><b>Summarize-Then-Decide</b><pre><code>1) Summarize the input faithfully (no advice).
-2) Given the summary, decide [X] and justify with quotes.</code></pre></div>
-  <div class="card"><b>Extract-Structure</b><pre><code>Extract fields into valid JSON: { "field": "type", ... }.
-If missing, use null. Return ONLY JSON.</code></pre></div>
-  <div class="card"><b>Compare-Against-Rubric</b><pre><code>First critique draft vs rubric. Then rewrite to meet rubric.</code></pre></div>
-</div>
-</div></body></html>
+Output format: [bullet spec].</code></pre>
+        </div>
+
+        <div class="card">
+          <b>Summarize-Then-Decide</b>
+          <pre><code>1) Summarize the input faithfully (no advice).
+2) Given the summary, decide [X] and justify with quotes.</code></pre>
+        </div>
+
+        <div class="card">
+          <b>Extract-Structure</b>
+          <pre><code>Extract fields into valid JSON: &#123; "field": "type", ... &#125;.
+If missing, use null. Return ONLY JSON.</code></pre>
+        </div>
+
+        <div class="card">
+          <b>Compare-Against-Rubric</b>
+          <pre><code>First critique draft vs rubric. Then rewrite to meet rubric.</code></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

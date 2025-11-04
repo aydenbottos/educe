@@ -15,13 +15,35 @@ a:hover{text-decoration:underline}
 .btn.ghost{border:1px solid #3b3f46; color:#c9d2d9}
 .badge{display:inline-block; padding:4px 10px; border:1px solid #2b2f35; border-radius:999px; font-size:12px; color:#9fb0bb}
 .grid{display:grid; gap:22px}
-.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.card{background:#0f141b;border:1px solid #1a2027;border-radius:14px;padding:18px}
+
+/* ✅ Responsive two-column grid so cards don't get too narrow */
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+
+.card{
+  background:#0f141b; border:1px solid #1a2027; border-radius:14px; padding:18px;
+  /* ✅ Allow long tokens/JSON to wrap inside cards */
+  overflow-wrap:anywhere; word-break:break-word;
+}
 .footer{opacity:.7; font-size:14px; margin-top:40px}
 h1{font-size:42px; line-height:1.15; margin:0 0 16px}
 h2{font-size:24px; margin:30px 0 10px}
 ul{padding-left:18px}
 code,pre{font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace}
+
+/* ✅ Wrap code/pre content instead of overflowing */
+pre{white-space:pre-wrap; overflow-wrap:anywhere; word-break:break-word; margin:0}
+code{white-space:inherit}
+.card pre, .card code{display:block; white-space:pre-wrap}
+
+/* Optional: small visual polish for code blocks */
+pre code{display:block; padding:6px 0}
+
+/* Misc */
 .hero-kicker{letter-spacing:.12em; text-transform:uppercase; color:#9fb0bb}
-.logo{font-weight:900; letter-spacing:.02em}
+.logo{font-weight:900; letter-spacing:.02em; font-size: 32px;}
 .logo i{color:var(--teal); font-style:normal}
+
+/* ✅ Mobile tweaks */
+@media (max-width:540px){
+  h1{font-size:34px}
+}
